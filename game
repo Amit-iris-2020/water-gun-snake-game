@@ -1,0 +1,69 @@
+""" snake , water , gun   game."""
+
+
+import random
+chance=10
+No_chance=0
+H_chance=0
+c_chance=0
+l=("Gun","Snake","Water")
+while(No_chance<chance):
+
+            a1= str(input("your turn:"))
+            a2=random.choice(l)
+            No_chance = No_chance + 1
+            if (a1==a2):
+                print("match draw")
+                print(f"you played  {No_chance}")
+                print(f"your input {a1} and computer input { a2}")
+            elif (a1=="Gun" and a2=="Snake"):
+                H_chance=H_chance+1
+                print(f"You won {H_chance}")
+                print(f"your input {a1} and computer input {a2}")
+                print(f"you played {No_chance}")
+            elif (a1 == "Water" and a2 == "Snake"):
+                H_chance = H_chance + 1
+                print(f"You won {H_chance}")
+                print(f"your input {a1} and computer input {a2}")
+                print(f"you played {No_chance}")
+
+            elif (a1 == "Water" and a2 == "Gun"):
+                H_chance = H_chance + 1
+                print(f"You won {H_chance}")
+                print(f"your input {a1} and computer input {a2}")
+                print(f"you played {No_chance}")
+            elif (a1 == "Snake" and a2 == "Water"):
+                H_chance = H_chance + 1
+                print(f"You won {H_chance}")
+                print(f"your input {a1} and computer input {a2}")
+                print(f"you played {No_chance}")
+            elif (a1 == "Snake" and a2 == "Gun"):
+                c_chance=c_chance+1
+                print(f"computer won {c_chance}")
+                print(f"your input {a1} and computer input {a2}")
+                print(f"you played {No_chance}")
+            elif (a1 == "Gun" and a2 == "Water"):
+                c_chance = c_chance + 1
+                print(f"computer won {c_chance}")
+                print(f"your input {a1} and computer input {a2}")
+                print(f"you played {No_chance}")
+            else:
+                print("you enter wrong keyword")
+
+
+
+if(c_chance > H_chance):
+        print(f"Computer Win.\n computer won{c_chance}  and  You win  {H_chance}")
+elif(c_chance<H_chance):
+        print(f"You Won.\n computer won{c_chance}  and  You win  {H_chance}")
+elif(c_chance<H_chance):
+    print("Match Draw")
+print("Game Over")
+
+
+
+
+
+
+
+
